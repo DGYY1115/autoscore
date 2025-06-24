@@ -98,7 +98,7 @@ if __name__ == "__main__":
 
         full_description = "".join(parts)
         md5 = hashlib.md5(full_description.encode("utf-8")).hexdigest()
-        last_sheetnum = last_downloads.get(md5, -1)
+        last_sheetnum = latest_downloads.get(md5, -1)
         latest_downloads[md5] = last_sheetnum
 
         parser = get_instance(source_name)
